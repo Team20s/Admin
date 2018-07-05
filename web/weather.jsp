@@ -21,21 +21,23 @@
   	}
 	#title{
 		margin-left:30px;
-		font-size:55px;
+		padding-top:10px;
+		font-size:50px;
 		color:white;
 		text-shadow:0px 3px #747474;
 	}
 	#w{
 		margin-left:30px;
 		margin-top:35px;
-		width:500px;
-		height:200px;
+		width:100%;
+		height:18%;
 		color:white;
 	}
 	#date{
 		margin-top:-30px;
-		font-size:18px;
+		font-size:15px;
 		text-shadow:0px 2px #747474;
+		margin-bottom:10px;
 	}
 	#wea{
 		line-height:35px;
@@ -45,14 +47,15 @@
 	#temp{
 		font-size:50px;
 		text-shadow:0px 2px #747474;
+		margin-top:10px;
 	}
 	#total{
 		margin-left:30px;
 		width:100%;
 	}
 	hr{
-		position:relative;
 		width:95%;
+		color:white;
 	}
 	#f_area{
 		position:relative;
@@ -64,6 +67,7 @@
 		opacity:0.5;
 	}
 	#f{
+		position:relative;
 		margin-top:10px;
 		width:500px;
 		height:650px;
@@ -80,6 +84,7 @@
 		opacity:0.5;
 	}
 	#m{
+		position:relative;
 		margin-top:10px;
 		margin:0 auto;
 		width:300px;
