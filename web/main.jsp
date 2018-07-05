@@ -202,7 +202,6 @@
 
 	<!-- Section -->
 	<div class="content-wrapper">
-		<div class="container-fluid">
 			<c:choose>
 				<c:when test="${ center != null }">
 					<jsp:include page="${ center }.jsp"></jsp:include>
@@ -211,7 +210,6 @@
 					<jsp:include page="center.jsp"></jsp:include>
 				</c:otherwise>
 			</c:choose>
-		</div>
 	</div>
 	<!-- /.container-fluid-->
 	<!-- /.content-wrapper-->

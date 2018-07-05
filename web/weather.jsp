@@ -12,18 +12,25 @@
   <meta name="author" content="">
   <title>SB Admin - Start Bootstrap Template</title>
   <style>
+  	#background{
+  		margin-top:-20px;
+  		width:100%;
+  		height:1000px;
+  		background-size:100%; 
+  		background-image:url('img/korea.jpg');
+  	}
 	#title{
-		margin-left:50px;
+		margin-left:30px;
 		font-size:55px;
 		color:white;
 		text-shadow:0px 3px #747474;
 	}
 	#w{
-		margin-left:50px;
+		margin-left:30px;
+		margin-top:35px;
 		width:500px;
 		height:200px;
 		color:white;
-		margin-bottom:20px;
 	}
 	#date{
 		margin-top:-30px;
@@ -40,8 +47,8 @@
 		text-shadow:0px 2px #747474;
 	}
 	#total{
-		margin-left:50px;
-		width:1000px;
+		margin-left:30px;
+		width:100%;
 	}
 	hr{
 		position:relative;
@@ -178,12 +185,22 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
 </head>
-<body style="background-size:100%; background-image:url('img/korea.jpg');">
-<h1 id="title">Seoul</h1>
-<div id="w"></div>
-<div id="total">
-<div id="f_area"><h3 style="margin-left:10px;">Forecast</h3><hr><div id="f"></div></div>
-<div id="m_area"><h3 style="margin-left:10px;">Map</h3><hr><div id="m"></div></div>
+<body>
+<div id="background">
+	<h1 id="title">Seoul</h1>
+	<div id="w"></div>
+	<div id="total">
+		<div id="f_area">
+			<h3 style="margin-left:10px;">Forecast</h3>
+			<hr>
+			<div id="f"></div>
+		</div>
+		<div id="m_area">
+			<h3 style="margin-left:10px;">Map</h3>
+			<hr>
+			<div id="m"></div>
+		</div>
+	</div>
 </div>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
