@@ -10,6 +10,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>SB Admin - Start Bootstrap Template</title>
+  <style>
+  </style>
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- jquery 사용하기 위해 써줌 -->
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -79,8 +81,6 @@
         </li>
         
       </ul>
-      
-      
       
       
       <ul class="navbar-nav sidenav-toggler">
