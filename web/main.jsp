@@ -31,33 +31,59 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="main.cacao?page=user/add">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">User Add</span>
-          </a>
-        </li>
+      
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="user.cacao?page=userlist&cmd=list">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">User List</span>
-          </a>
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseUsers" data-parent="#exampleAccordion">
+        <i class="fa fa-users" aria-hidden="true"></i>
+            <span class="nav-link-text">Users</span>
+        </a>
+        
+        <ul class="sidenav-second-level collapse" id="collapseUsers">
+        <li><a href="main.cacao?page=user/add"> <i class="fa fa-user-plus" aria-hidden="true"></i> User Add</a></li>
+        <li><a href="user.cacao?page=userlist&cmd=list"><i class="fa fa-list-ul" aria-hidden="true"></i> User List</a></li>
+        
+        </ul>
+          
+          
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+        
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
+        
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseProducts" data-parent="#exampleAccordion">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             <span class="nav-link-text">Product</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
+          
+          <ul class="sidenav-second-level collapse" id="collapseProducts">
             <li>
-              <a href="main.cacao?page=product/add">Product Add</a>
+              <a href="main.cacao?page=product/add"><i class="fa fa-cart-plus" aria-hidden="true"></i> Product Add</a>
             </li>
             <li>
-              <a href="product.cacao?cmd=list">Product List</a>
+              <a href="product.cacao?cmd=list"><i class="fa fa-list-ul" aria-hidden="true"></i> Product List</a>
             </li>
           </ul>
         </li>
+        
+        
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Weather">
+          <a class="nav-link" href="main.cacao?page=weather">
+            <i class="fa fa-cloud" aria-hidden="true"></i> 
+            <span class="nav-link-text">Weather</span>
+          </a>
+        </li>
+        
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="chart.cacao">
+            <i class="fa fa-bar-chart" aria-hidden="true"></i> 
+            <span class="nav-link-text">Charts</span>
+          </a>
+        </li>
+        
       </ul>
+      
+      
+      
+      
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
           <a class="nav-link text-center" id="sidenavToggler">
@@ -203,7 +229,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="login.cacao">Logout</a>
           </div>
         </div>
       </div>

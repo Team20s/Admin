@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,19 +19,33 @@
   <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 
+<script>
+
+$(document).ready(function(){
+	
+	$('#login_btn').click(function(){
+		
+		$('#login_form').submit();
+		
+	});
+	
+});
+
+</script>
+
 <body class="bg-dark">
   <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+        <form id="login_form" method="post" action="login">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <label for="exampleInputEmail1">ID</label>
+            <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Enter ID" name="id">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="pwd">
           </div>
           <div class="form-group">
             <div class="form-check">
@@ -36,9 +53,14 @@
                 <input class="form-check-input" type="checkbox"> Remember Password</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+          <button class="btn btn-primary btn-block" id="login_btn">Login</button>
         </form>
         <div class="text-center">
+        		<c:choose>
+					<c:when test="${loginState == 0 }">
+						<span class="d-block small" style="color:red;">ID 혹은 Password를 다시 확인해주세요</span>
+					</c:when>		
+        		</c:choose>
           <a class="d-block small mt-3" href="register.html">Register an Account</a>
           <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
         </div>

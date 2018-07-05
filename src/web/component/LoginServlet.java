@@ -27,13 +27,14 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		if(session != null) {
 			session.invalidate();
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("login.jsp");
 		}
 	}
 	// LOGIN 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
+		String loginState = "0";
 		
 		// 해당 ID를 서버에 요청하여
 		// User 정보가 있는지 확인
@@ -51,11 +52,13 @@ public class LoginServlet extends HttpServlet {
 						request.getSession();
 				session.setAttribute("loginuser", user);
 			}else {
-				request.setAttribute("center", "loginfail");
+				next = "login.jsp";
+				request.setAttribute("loginState", loginState);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("center", "loginfail");
+			next = "login.jsp";
+			request.setAttribute("loginState", loginState);
 		}
 		rd = request.getRequestDispatcher(next);
 		rd.forward(request, response);

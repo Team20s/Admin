@@ -20,7 +20,7 @@
 </script>
 </head>
 <body>
-<div id="main_center">
+<div id="main_center" class="container-fluid">
 	<h1>Main Center</h1>
 	
 </div>
