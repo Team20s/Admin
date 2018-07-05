@@ -4,6 +4,7 @@ public class Navi {
 	   public static String home = "<a href='main.cacao'>HOME</a>";
 	   public static String register = home + " > register";
 	   public static String about = home + " > about us";
+	   public static String weather = home + " > weather";
 	   public static String userAdd = home + " > user add";
 	   public static String userlist = home + " > User List";
 	   public static String userdetail = home + " > User Detail";

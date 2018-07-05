@@ -11,6 +11,9 @@ public class MakeUI {
 		}else if(view.equals("about")) {
 			request.setAttribute("center", "about");
 			request.setAttribute("nav", Navi.about);
+		}else if(view.equals("weather")) {
+			request.setAttribute("center", "weather");
+			request.setAttribute("nav", Navi.weather);
 		}else if(view.equals("user/add")) {
 			request.setAttribute("center", "user/add");
 			request.setAttribute("nav", Navi.userAdd);
