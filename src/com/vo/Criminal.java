@@ -1,6 +1,6 @@
 package com.vo;
 
-public class Climinal {
+public class Criminal {
 	private String kind;
 	private int apart;
 	private int pc;
@@ -9,7 +9,7 @@ public class Climinal {
 	private int school;
 	private int subway;
 	private int office;
-	public Climinal(String kind, int apart, int pc, int toilet, int parking, int school, int subway, int office) {
+	public Criminal(String kind, int apart, int pc, int toilet, int parking, int school, int subway, int office) {
 		super();
 		this.kind = kind;
 		this.apart = apart;
@@ -90,7 +90,7 @@ public class Climinal {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Climinal other = (Climinal) obj;
+		Criminal other = (Criminal) obj;
 		if (apart != other.apart)
 			return false;
 		if (kind == null) {

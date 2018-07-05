@@ -30,6 +30,9 @@ public class MakeUI {
 		}else if(view.equals("productlist")) {
 			request.setAttribute("center", "product/list");
 			request.setAttribute("nav", Navi.productlist);
+		}else if(view.equals("criminal")) {
+			request.setAttribute("center", "criminal");
+			request.setAttribute("nav", Navi.productlist);
 		}
 	}
 }

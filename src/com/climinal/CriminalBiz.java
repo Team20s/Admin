@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 import com.frame.Biz;
 
-public class CliminalBiz<T,V> extends Biz<T,V> {
+public class CriminalBiz<T,V> extends Biz<T,V> {
 	
-	CliminalDao<T,V> dao;
+	CriminalDao<T,V> dao;
 	
-	public CliminalBiz() {
-		dao = new CliminalDao<>();
+	public CriminalBiz() {
+		dao = new CriminalDao<>();
 	}
 	
 	@Override
