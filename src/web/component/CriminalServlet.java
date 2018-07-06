@@ -33,35 +33,180 @@ public class CriminalServlet extends HttpServlet {
     
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<Criminal> list = null;
+		String cmd = request.getParameter("cmd");
+		//[ { data:[] } ]
+		JSONArray ja = null;//json배열
+		JSONObject jo = null;//json 객체
+		JSONArray ija = null;//범죄 종류와 통계 데이터 json 배열 
+		JSONArray jja = null;
 		
-		try {
-			list = biz.get();
-			//[ { data:[] } ]
-			JSONArray ja = new JSONArray();//json배열
-			JSONObject jo = new JSONObject();//json 객체
-			JSONArray ija = new JSONArray();//범죄 종류와 통계 데이터 json 배열 
-			JSONArray jja = null;
-			
-			//디비에서 뺀 데이터를 넣어줌
-			for(Criminal p : list) {
-				jja=new JSONArray();
-				jja.add(p.getKind());
-				jja.add(p.getApart());
-				ija.add(jja);
+		if(cmd.equals("apart")) {
+			try {
+				list = biz.get();
+				
+				ja = new JSONArray();
+				jo = new JSONObject();
+				ija = new JSONArray();
+				
+				//디비에서 뺀 데이터를 넣어줌
+				for(Criminal p : list) {
+					jja=new JSONArray();
+					jja.add(p.getKind());
+					jja.add(p.getApart());
+					ija.add(jja);
+				}
+				jo.put("type", "pie");
+				jo.put("name", "Browser share");
+				jo.put("data", ija);
+				ja.add(jo);
+
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-			System.out.println(ija);
-			jo.put("type", "pie");
-			jo.put("name", "Browser share");
-			jo.put("data", ija);
-			ja.add(jo);
-			
+		}else if(cmd.equals("pc")) {
+			try {
+				list = biz.get();
+				
+				ja = new JSONArray();
+				jo = new JSONObject();
+				ija = new JSONArray();
+				
+				//디비에서 뺀 데이터를 넣어줌
+				for(Criminal p : list) {
+					jja=new JSONArray();
+					jja.add(p.getKind());
+					jja.add(p.getPc());
+					ija.add(jja);
+				}
+				jo.put("type", "pie");
+				jo.put("name", "Browser share");
+				jo.put("data", ija);
+				ja.add(jo);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(cmd.equals("toilet")) {
+			try {
+				list = biz.get();
+				
+				ja = new JSONArray();
+				jo = new JSONObject();
+				ija = new JSONArray();
+				
+				//디비에서 뺀 데이터를 넣어줌
+				for(Criminal p : list) {
+					jja=new JSONArray();
+					jja.add(p.getKind());
+					jja.add(p.getToilet());
+					ija.add(jja);
+				}
+				jo.put("type", "pie");
+				jo.put("name", "Browser share");
+				jo.put("data", ija);
+				ja.add(jo);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(cmd.equals("parking")) {
+			try {
+				list = biz.get();
+				
+				ja = new JSONArray();
+				jo = new JSONObject();
+				ija = new JSONArray();
+				
+				//디비에서 뺀 데이터를 넣어줌
+				for(Criminal p : list) {
+					jja=new JSONArray();
+					jja.add(p.getKind());
+					jja.add(p.getParking());
+					ija.add(jja);
+				}
+				jo.put("type", "pie");
+				jo.put("name", "Browser share");
+				jo.put("data", ija);
+				ja.add(jo);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(cmd.equals("school")) {
+			try {
+				list = biz.get();
+				
+				ja = new JSONArray();
+				jo = new JSONObject();
+				ija = new JSONArray();
+				
+				//디비에서 뺀 데이터를 넣어줌
+				for(Criminal p : list) {
+					jja=new JSONArray();
+					jja.add(p.getKind());
+					jja.add(p.getSchool());
+					ija.add(jja);
+				}
+				jo.put("type", "pie");
+				jo.put("name", "Browser share");
+				jo.put("data", ija);
+				ja.add(jo);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(cmd.equals("subway")) {
+			try {
+				list = biz.get();
+				
+				ja = new JSONArray();
+				jo = new JSONObject();
+				ija = new JSONArray();
+				
+				//디비에서 뺀 데이터를 넣어줌
+				for(Criminal p : list) {
+					jja=new JSONArray();
+					jja.add(p.getKind());
+					jja.add(p.getSubway());
+					ija.add(jja);
+				}
+				jo.put("type", "pie");
+				jo.put("name", "Browser share");
+				jo.put("data", ija);
+				ja.add(jo);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(cmd.equals("office")) {
+			try {
+				list = biz.get();
+				
+				ja = new JSONArray();
+				jo = new JSONObject();
+				ija = new JSONArray();
+				
+				//디비에서 뺀 데이터를 넣어줌
+				for(Criminal p : list) {
+					jja=new JSONArray();
+					jja.add(p.getKind());
+					jja.add(p.getOffice());
+					ija.add(jja);
+				}
+				jo.put("type", "pie");
+				jo.put("name", "Browser share");
+				jo.put("data", ija);
+				ja.add(jo);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		if(ja != null) {			
 			//
 			response.setContentType("text/json;charset=EUC-KR");
 			PrintWriter out = response.getWriter();
 			out.print(ja.toJSONString());
-			
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
 	}
 }
