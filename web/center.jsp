@@ -13,6 +13,8 @@
 		margin:0 auto;
 		background:white;
 		text-align:center;
+		background-image: url('img/logo.png');
+		background-size: 80%;
 	}
 </style>
 <script>
@@ -21,8 +23,6 @@
 </head>
 <body>
 <div id="main_center" class="container-fluid">
-	<h1>Main Center</h1>
-	
 </div>
 </body>
 </html>

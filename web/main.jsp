@@ -11,6 +11,12 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>SB Admin - Start Bootstrap Template</title>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Bitter|Galada');
+	.btn-default, .btn-default:hover, .btn-default:active, .btn-default:visited {
+    	background-color: #FFA2A2;
+    }
+</style>
 <!-- jquery 사용하기 위해 써줌 -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -46,8 +46,9 @@
 		</tr>
 	</table>
 	<br>
-	<a id="userdelete_bt" href="#">DELETE</a>&nbsp;&nbsp;
-	<a href="user.cacao?cmd=update&id=${detailuser.id }">UPDATE</a>
+	<button class="btn btn-default" id="userdelete_bt" href="#">DELETE</button>&nbsp;&nbsp;
+	<button class="btn btn-default"><a href="user.cacao?cmd=update&id=${detailuser.id }"
+	style="color:black;">UPDATE</a></button>
 </div>
 </body>
 </html>

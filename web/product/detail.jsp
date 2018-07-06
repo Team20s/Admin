@@ -50,8 +50,10 @@
 		</tr>
 	</table>
 	<br>
-	<a id="productdelete_bt" href="#">DELETE</a>&nbsp;&nbsp;
-	<a href="product.cacao?cmd=update&id=${productdetail.id }">UPDATE</a>
+	<button class="btn btn-default" id="productdelete_bt" href="#">DELETE</button>&nbsp;&nbsp;
+	<button class="btn btn-default"><a href="product.cacao?cmd=update&id=${productdetail.id }"
+	style="color:black;">
+	UPDATE</a></button>
 </div>
 </body>
 </html>
