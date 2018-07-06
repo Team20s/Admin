@@ -6,16 +6,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <style>
-	.chart{
-		float:left;
-		width:40%;
+	
+	#demo{
+		width:70%;
+		margin-left:15%;
+		margin-top:15%;
 	}
+	
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#5D5D5D' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#5D5D5D' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}	
 </style>
+<!-- chart script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts-3d.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
+<!-- slide script -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <script>
 function drawChart(mydata,title,div){
 	Highcharts.chart(div, {
@@ -117,12 +132,51 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<div class="chart" id="apartchart"></div>
-	<div class="chart" id="pcchart"></div>
-	<div class="chart" id="toiletchart"></div>
-	<div class="chart" id="parkingchart"></div>
-	<div class="chart" id="schoolchart"></div>
-	<div class="chart" id="subwaychart"></div>
-	<div class="chart" id="officechart"></div>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
+    <li data-target="#demo" data-slide-to="6"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="chart" id="apartchart"></div>
+    </div>
+    <div class="carousel-item">
+    	<div class="chart" id="pcchart"></div>
+    </div>
+    <div class="carousel-item">
+    	<div class="chart" id="toiletchart"></div>
+    </div>
+    <div class="carousel-item">
+    	<div class="chart" id="parkingchart"></div>
+    </div>
+    <div class="carousel-item">
+    	<div class="chart" id="schoolchart"></div>
+    </div>
+    <div class="carousel-item">
+    	<div class="chart" id="subwaychart"></div>
+    </div>
+    <div class="carousel-item">
+    	<div class="chart" id="officechart"></div>
+    </div>    
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
 </body>
 </html>
